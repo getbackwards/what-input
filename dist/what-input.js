@@ -572,7 +572,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var logs = document.querySelectorAll('[data-module="console-log"]');
 	for (var _i2 = 0, _len2 = logs.length; _i2 < _len2; _i2++) {
 	  logs[_i2].addEventListener('click', function (event) {
-	    // alert(this.dataset.message);
 	    console.log(this.dataset.message);
 	    event.preventDefault();
 	  });
