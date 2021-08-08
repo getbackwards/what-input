@@ -37,7 +37,8 @@ function clean() {
 
 function scripts() {
   return gulp
-    .src(['./src/scripts/what-input.js'])
+    .src(['./src/scripts/what-input.js',
+    './src/scripts/what-input-demo.js',])
     .pipe($.standard())
     .pipe(
       $.standard.reporter('default', {

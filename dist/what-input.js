@@ -58,6 +58,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+	module.exports = __webpack_require__(2);
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -510,6 +518,65 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  };
 	}();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _whatInput = __webpack_require__(1);
+
+	var _whatInput2 = _interopRequireDefault(_whatInput);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	console.log('This is a test');
+
+	// use `whatInput.ask()`
+	var links = document.querySelectorAll('.well a, .well button');
+	for (var i = 0, len = links.length; i < len; i++) {
+	  links[i].addEventListener('click', function (event) {
+	    console.log('[script test] ' + _whatInput2.default.ask() + ' ' + _whatInput2.default.element());
+
+	    event.preventDefault();
+	  });
+	}
+
+	var formControls = document.querySelectorAll('input, textarea, select');
+	for (var _i = 0, _len = formControls.length; _i < _len; _i++) {
+	  formControls[_i].addEventListener('click', function (event) {
+	    console.log('[script test] ' + _whatInput2.default.ask() + ' ' + _whatInput2.default.element());
+	  });
+	}
+
+	// use `whatInput.registerOnChange()`
+	var myInputFunction = function myInputFunction(type) {
+	  console.log('input: ' + type);
+	};
+
+	var myIntentFunction = function myIntentFunction(type) {
+	  console.log('intent: ' + type);
+	};
+
+	_whatInput2.default.registerOnChange(myInputFunction);
+	_whatInput2.default.registerOnChange(myIntentFunction, 'intent');
+
+	// don't let the form submit because it's not real
+	var form = document.querySelector('form');
+	form.addEventListener('submit', function (event) {
+	  event.preventDefault();
+	});
+
+	// console-log functionality
+	var logs = document.querySelectorAll('[data-module="console-log"]');
+	for (var _i2 = 0, _len2 = logs.length; _i2 < _len2; _i2++) {
+	  logs[_i2].addEventListener('click', function (event) {
+	    // alert(this.dataset.message);
+	    console.log(this.dataset.message);
+	    event.preventDefault();
+	  });
+	}
 
 /***/ })
 /******/ ])

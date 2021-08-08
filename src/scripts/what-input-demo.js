@@ -1,3 +1,7 @@
+import whatInput from "./what-input";
+
+console.log('This is a test');
+
 // use `whatInput.ask()`
     let links = document.querySelectorAll('.well a, .well button')
     for (let i = 0, len = links.length; i < len; i++) {
