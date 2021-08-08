@@ -96,8 +96,8 @@
   <script src="scripts/what-input.js"></script>
   <script>
     // use `whatInput.ask()`
-    var links = document.querySelectorAll('.well a, .well button')
-    for (var i = 0, len = links.length; i < len; i++) {
+    let links = document.querySelectorAll('.well a, .well button')
+    for (let i = 0, len = links.length; i < len; i++) {
       links[i].addEventListener('click', function (event) {
         console.log(
           '[script test] ' + whatInput.ask() + ' ' + whatInput.element()
@@ -107,8 +107,8 @@
       })
     }
 
-    var formControls = document.querySelectorAll('input, textarea, select')
-    for (var i = 0, len = formControls.length; i < len; i++) {
+    let formControls = document.querySelectorAll('input, textarea, select')
+    for (let i = 0, len = formControls.length; i < len; i++) {
       formControls[i].addEventListener('click', function (event) {
         console.log(
           '[script test] ' + whatInput.ask() + ' ' + whatInput.element()
@@ -117,11 +117,11 @@
     }
 
     // use `whatInput.registerOnChange()`
-    var myInputFunction = function (type) {
+    let myInputFunction = function (type) {
       console.log('input: ' + type)
     }
 
-    var myIntentFunction = function (type) {
+    let myIntentFunction = function (type) {
       console.log('intent: ' + type)
     }
 
