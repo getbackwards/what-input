@@ -1,6 +1,6 @@
 import whatInput from "./what-input";
 
-console.log('This is a test');
+console.log('Log to make sure "what-input-demo.js" is working');
 
 // use `whatInput.ask()`
     let links = document.querySelectorAll('.well a, .well button')

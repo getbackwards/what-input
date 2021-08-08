@@ -531,7 +531,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	console.log('This is a test');
+	console.log('Log to make sure "what-input-demo.js" is working');
 
 	// use `whatInput.ask()`
 	var links = document.querySelectorAll('.well a, .well button');
