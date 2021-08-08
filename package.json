@@ -49,5 +49,8 @@
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-standard": "^19.0.0",
     "webpack-stream": "3.2.0"
+  },
+  "dependencies": {
+    "yarn-audit-fix": "^6.3.11"
   }
 }
